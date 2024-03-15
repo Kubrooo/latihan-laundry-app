@@ -13,6 +13,7 @@ namespace Esemka_Laundry
         {
             base.OnLoad(e);
             _context = new DataContext();
+            //eror
             _context.Database.EnsureCreated();
         }
 
