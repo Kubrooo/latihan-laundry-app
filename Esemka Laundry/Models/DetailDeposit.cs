@@ -11,9 +11,9 @@ namespace Esemka_Laundry.Models
         public int Id { get; set; }
         public int PriceUnit { get; set; }
         public int TotalUnit { get; set; }
-        public DateTime CompletedDateTime { get; set; }
+        public DateTime? CompletedDateTime { get; set; }
         public Service Service { get; set; }
-        public PrePaidPackage PrePaidPackage { get; set; }
+        public PrePaidPackage? PrePaidPackage { get; set; }
         public HeaderDeposit HeaderDeposit { get; set; }
     }
 }

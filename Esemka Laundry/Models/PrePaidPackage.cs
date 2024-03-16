@@ -11,7 +11,7 @@ namespace Esemka_Laundry.Models
         public int Id { get; set; }
         public int Price { get; set; }
         public DateTime StartDateTime { get; set; }
-        public DateTime CompletedDateTime { get; set; }
+        public DateTime? CompletedDateTime { get; set; }
         public Customer Customer { get; set; }
         public Package Package { get; set; }
     }

@@ -10,7 +10,7 @@ namespace Esemka_Laundry.Models
     {
         public int Id { get; set; }
         public DateTime TransactionDateT { get; set; }
-        public DateTime CompleteEstimatedDateTime { get; set; }
+        public DateTime? CompleteEstimatedDateTime { get; set; }
         public Customer Customer { get; set; }
         public Employee Employee { get; set; }
     }
