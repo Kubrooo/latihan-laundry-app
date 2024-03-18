@@ -24,7 +24,7 @@ namespace Esemka_Laundry.Forms
         {
             base.OnLoad(e);
             _context.VwEmployeeAndJob.Load();
-           vWEmployeeAndJobBindingSource.DataSource = _context.VwEmployeeAndJob.Local.ToBindingList();
+            vWEmployeeAndJobBindingSource.DataSource = _context.VwEmployeeAndJob.Local.ToBindingList();
         }
 
         protected override void OnClosed(EventArgs e)

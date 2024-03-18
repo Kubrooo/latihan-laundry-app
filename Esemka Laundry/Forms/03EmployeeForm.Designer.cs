@@ -59,8 +59,8 @@
             cbEmployeeJobTittle = new ComboBox();
             numEmployeeSalary = new NumericUpDown();
             dataGridView1 = new DataGridView();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            employeeNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             emailDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             phoneNumberDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             addressDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -75,26 +75,27 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(288, 9);
+            label1.Location = new Point(252, 7);
             label1.Name = "label1";
-            label1.Size = new Size(133, 20);
+            label1.Size = new Size(105, 15);
             label1.TabIndex = 0;
             label1.Text = "Manage Employee";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(471, 30);
+            label2.Location = new Point(412, 22);
             label2.Name = "label2";
-            label2.Size = new Size(64, 20);
+            label2.Size = new Size(51, 15);
             label2.TabIndex = 1;
             label2.Text = "Search  :";
             // 
             // tbEmployeeSearch
             // 
-            tbEmployeeSearch.Location = new Point(541, 27);
+            tbEmployeeSearch.Location = new Point(473, 20);
+            tbEmployeeSearch.Margin = new Padding(3, 2, 3, 2);
             tbEmployeeSearch.Name = "tbEmployeeSearch";
-            tbEmployeeSearch.Size = new Size(178, 27);
+            tbEmployeeSearch.Size = new Size(156, 23);
             tbEmployeeSearch.TabIndex = 2;
             // 
             // vWEmployeeAndJobBindingSource
@@ -104,159 +105,168 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(46, 236);
+            label3.Location = new Point(40, 177);
             label3.Name = "label3";
-            label3.Size = new Size(94, 20);
+            label3.Size = new Size(73, 15);
             label3.TabIndex = 4;
             label3.Text = "Employee ID";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(46, 269);
+            label4.Location = new Point(40, 202);
             label4.Name = "label4";
-            label4.Size = new Size(49, 20);
+            label4.Size = new Size(39, 15);
             label4.TabIndex = 5;
             label4.Text = "Name";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(46, 302);
+            label5.Location = new Point(40, 226);
             label5.Name = "label5";
-            label5.Size = new Size(46, 20);
+            label5.Size = new Size(36, 15);
             label5.TabIndex = 6;
             label5.Text = "Email";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(46, 335);
+            label6.Location = new Point(40, 251);
             label6.Name = "label6";
-            label6.Size = new Size(108, 20);
+            label6.Size = new Size(88, 15);
             label6.TabIndex = 7;
             label6.Text = "Phone Number";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(46, 368);
+            label7.Location = new Point(40, 276);
             label7.Name = "label7";
-            label7.Size = new Size(62, 20);
+            label7.Size = new Size(49, 15);
             label7.TabIndex = 8;
             label7.Text = "Address";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(46, 416);
+            label8.Location = new Point(40, 312);
             label8.Name = "label8";
-            label8.Size = new Size(96, 20);
+            label8.Size = new Size(75, 15);
             label8.TabIndex = 9;
             label8.Text = "Date Of Birth";
             // 
             // tbEmployeeID
             // 
-            tbEmployeeID.Location = new Point(177, 233);
+            tbEmployeeID.Location = new Point(155, 175);
+            tbEmployeeID.Margin = new Padding(3, 2, 3, 2);
             tbEmployeeID.Name = "tbEmployeeID";
-            tbEmployeeID.Size = new Size(163, 27);
+            tbEmployeeID.Size = new Size(143, 23);
             tbEmployeeID.TabIndex = 10;
             // 
             // tbEmployeeName
             // 
-            tbEmployeeName.Location = new Point(177, 266);
+            tbEmployeeName.Location = new Point(155, 200);
+            tbEmployeeName.Margin = new Padding(3, 2, 3, 2);
             tbEmployeeName.Name = "tbEmployeeName";
-            tbEmployeeName.Size = new Size(163, 27);
+            tbEmployeeName.Size = new Size(143, 23);
             tbEmployeeName.TabIndex = 11;
             // 
             // tbEmployeeEmail
             // 
-            tbEmployeeEmail.Location = new Point(177, 299);
+            tbEmployeeEmail.Location = new Point(155, 224);
+            tbEmployeeEmail.Margin = new Padding(3, 2, 3, 2);
             tbEmployeeEmail.Name = "tbEmployeeEmail";
-            tbEmployeeEmail.Size = new Size(163, 27);
+            tbEmployeeEmail.Size = new Size(143, 23);
             tbEmployeeEmail.TabIndex = 12;
             // 
             // tbEmployeePhoneNumber
             // 
-            tbEmployeePhoneNumber.Location = new Point(177, 332);
+            tbEmployeePhoneNumber.Location = new Point(155, 249);
+            tbEmployeePhoneNumber.Margin = new Padding(3, 2, 3, 2);
             tbEmployeePhoneNumber.Name = "tbEmployeePhoneNumber";
-            tbEmployeePhoneNumber.Size = new Size(163, 27);
+            tbEmployeePhoneNumber.Size = new Size(143, 23);
             tbEmployeePhoneNumber.TabIndex = 13;
             // 
             // rtbEmployeeAddress
             // 
-            rtbEmployeeAddress.Location = new Point(177, 365);
+            rtbEmployeeAddress.Location = new Point(155, 274);
+            rtbEmployeeAddress.Margin = new Padding(3, 2, 3, 2);
             rtbEmployeeAddress.Name = "rtbEmployeeAddress";
-            rtbEmployeeAddress.Size = new Size(163, 40);
+            rtbEmployeeAddress.Size = new Size(143, 31);
             rtbEmployeeAddress.TabIndex = 15;
             rtbEmployeeAddress.Text = "";
             // 
             // dtpEmployeeDateOfBirth
             // 
-            dtpEmployeeDateOfBirth.Location = new Point(177, 411);
+            dtpEmployeeDateOfBirth.Location = new Point(155, 308);
+            dtpEmployeeDateOfBirth.Margin = new Padding(3, 2, 3, 2);
             dtpEmployeeDateOfBirth.Name = "dtpEmployeeDateOfBirth";
-            dtpEmployeeDateOfBirth.Size = new Size(163, 27);
+            dtpEmployeeDateOfBirth.Size = new Size(143, 23);
             dtpEmployeeDateOfBirth.TabIndex = 16;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(420, 238);
+            label9.Location = new Point(368, 178);
             label9.Name = "label9";
-            label9.Size = new Size(70, 20);
+            label9.Size = new Size(54, 15);
             label9.TabIndex = 17;
             label9.Text = "Job Tittle";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(420, 269);
+            label10.Location = new Point(368, 202);
             label10.Name = "label10";
-            label10.Size = new Size(49, 20);
+            label10.Size = new Size(38, 15);
             label10.TabIndex = 18;
             label10.Text = "Salary";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(420, 302);
+            label11.Location = new Point(368, 226);
             label11.Name = "label11";
-            label11.Size = new Size(70, 20);
+            label11.Size = new Size(57, 15);
             label11.TabIndex = 19;
             label11.Text = "Password";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(420, 335);
+            label12.Location = new Point(368, 251);
             label12.Name = "label12";
-            label12.Size = new Size(127, 20);
+            label12.Size = new Size(104, 15);
             label12.TabIndex = 20;
             label12.Text = "Confirm Password";
             // 
             // btnEmployeeInsert
             // 
-            btnEmployeeInsert.Location = new Point(420, 365);
+            btnEmployeeInsert.Location = new Point(368, 274);
+            btnEmployeeInsert.Margin = new Padding(3, 2, 3, 2);
             btnEmployeeInsert.Name = "btnEmployeeInsert";
-            btnEmployeeInsert.Size = new Size(94, 29);
+            btnEmployeeInsert.Size = new Size(82, 22);
             btnEmployeeInsert.TabIndex = 21;
             btnEmployeeInsert.Text = "Insert";
             btnEmployeeInsert.UseVisualStyleBackColor = true;
             // 
             // btnEmployeeUpdate
             // 
-            btnEmployeeUpdate.Location = new Point(520, 365);
+            btnEmployeeUpdate.Location = new Point(455, 274);
+            btnEmployeeUpdate.Margin = new Padding(3, 2, 3, 2);
             btnEmployeeUpdate.Name = "btnEmployeeUpdate";
-            btnEmployeeUpdate.Size = new Size(94, 29);
+            btnEmployeeUpdate.Size = new Size(82, 22);
             btnEmployeeUpdate.TabIndex = 22;
             btnEmployeeUpdate.Text = "Update";
             btnEmployeeUpdate.UseVisualStyleBackColor = true;
             // 
             // btnEmployeeDelete
             // 
-            btnEmployeeDelete.Location = new Point(620, 365);
+            btnEmployeeDelete.Location = new Point(542, 274);
+            btnEmployeeDelete.Margin = new Padding(3, 2, 3, 2);
             btnEmployeeDelete.Name = "btnEmployeeDelete";
-            btnEmployeeDelete.Size = new Size(94, 29);
+            btnEmployeeDelete.Size = new Size(82, 22);
             btnEmployeeDelete.TabIndex = 23;
             btnEmployeeDelete.Text = "Delete";
             btnEmployeeDelete.UseVisualStyleBackColor = true;
@@ -265,9 +275,10 @@
             // 
             btnEmployeeSave.Enabled = false;
             btnEmployeeSave.ForeColor = Color.Green;
-            btnEmployeeSave.Location = new Point(471, 400);
+            btnEmployeeSave.Location = new Point(412, 300);
+            btnEmployeeSave.Margin = new Padding(3, 2, 3, 2);
             btnEmployeeSave.Name = "btnEmployeeSave";
-            btnEmployeeSave.Size = new Size(94, 29);
+            btnEmployeeSave.Size = new Size(82, 22);
             btnEmployeeSave.TabIndex = 24;
             btnEmployeeSave.Text = "Save";
             btnEmployeeSave.UseVisualStyleBackColor = true;
@@ -276,40 +287,45 @@
             // 
             btnEmployeeCancel.Enabled = false;
             btnEmployeeCancel.ForeColor = Color.Green;
-            btnEmployeeCancel.Location = new Point(571, 400);
+            btnEmployeeCancel.Location = new Point(500, 300);
+            btnEmployeeCancel.Margin = new Padding(3, 2, 3, 2);
             btnEmployeeCancel.Name = "btnEmployeeCancel";
-            btnEmployeeCancel.Size = new Size(94, 29);
+            btnEmployeeCancel.Size = new Size(82, 22);
             btnEmployeeCancel.TabIndex = 25;
             btnEmployeeCancel.Text = "Cancel";
             btnEmployeeCancel.UseVisualStyleBackColor = true;
             // 
             // tbEmployeePassword
             // 
-            tbEmployeePassword.Location = new Point(551, 299);
+            tbEmployeePassword.Location = new Point(482, 224);
+            tbEmployeePassword.Margin = new Padding(3, 2, 3, 2);
             tbEmployeePassword.Name = "tbEmployeePassword";
-            tbEmployeePassword.Size = new Size(163, 27);
+            tbEmployeePassword.Size = new Size(143, 23);
             tbEmployeePassword.TabIndex = 28;
             // 
             // tbEmployeeConfirmPw
             // 
-            tbEmployeeConfirmPw.Location = new Point(551, 332);
+            tbEmployeeConfirmPw.Location = new Point(482, 249);
+            tbEmployeeConfirmPw.Margin = new Padding(3, 2, 3, 2);
             tbEmployeeConfirmPw.Name = "tbEmployeeConfirmPw";
-            tbEmployeeConfirmPw.Size = new Size(163, 27);
+            tbEmployeeConfirmPw.Size = new Size(143, 23);
             tbEmployeeConfirmPw.TabIndex = 29;
             // 
             // cbEmployeeJobTittle
             // 
             cbEmployeeJobTittle.FormattingEnabled = true;
-            cbEmployeeJobTittle.Location = new Point(551, 235);
+            cbEmployeeJobTittle.Location = new Point(482, 176);
+            cbEmployeeJobTittle.Margin = new Padding(3, 2, 3, 2);
             cbEmployeeJobTittle.Name = "cbEmployeeJobTittle";
-            cbEmployeeJobTittle.Size = new Size(163, 28);
+            cbEmployeeJobTittle.Size = new Size(143, 23);
             cbEmployeeJobTittle.TabIndex = 30;
             // 
             // numEmployeeSalary
             // 
-            numEmployeeSalary.Location = new Point(551, 271);
+            numEmployeeSalary.Location = new Point(482, 203);
+            numEmployeeSalary.Margin = new Padding(3, 2, 3, 2);
             numEmployeeSalary.Name = "numEmployeeSalary";
-            numEmployeeSalary.Size = new Size(163, 27);
+            numEmployeeSalary.Size = new Size(143, 23);
             numEmployeeSalary.TabIndex = 31;
             // 
             // dataGridView1
@@ -318,92 +334,75 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, employeeNameDataGridViewTextBoxColumn, emailDataGridViewTextBoxColumn, phoneNumberDataGridViewTextBoxColumn, addressDataGridViewTextBoxColumn, dateOfBirthDataGridViewTextBoxColumn, jobTitleDataGridViewTextBoxColumn, salaryDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, emailDataGridViewTextBoxColumn, phoneNumberDataGridViewTextBoxColumn, addressDataGridViewTextBoxColumn, dateOfBirthDataGridViewTextBoxColumn, jobTitleDataGridViewTextBoxColumn, salaryDataGridViewTextBoxColumn });
             dataGridView1.DataSource = vWEmployeeAndJobBindingSource;
-            dataGridView1.Location = new Point(12, 60);
+            dataGridView1.Location = new Point(12, 42);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(707, 167);
+            dataGridView1.Size = new Size(617, 128);
             dataGridView1.TabIndex = 32;
             // 
-            // idDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.ReadOnly = true;
-            idDataGridViewTextBoxColumn.Width = 125;
+            dataGridViewTextBoxColumn1.DataPropertyName = "EmployeeId";
+            dataGridViewTextBoxColumn1.HeaderText = "EmployeeId";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // employeeNameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            employeeNameDataGridViewTextBoxColumn.DataPropertyName = "EmployeeName";
-            employeeNameDataGridViewTextBoxColumn.HeaderText = "EmployeeName";
-            employeeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            employeeNameDataGridViewTextBoxColumn.Name = "employeeNameDataGridViewTextBoxColumn";
-            employeeNameDataGridViewTextBoxColumn.ReadOnly = true;
-            employeeNameDataGridViewTextBoxColumn.Width = 125;
+            dataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            dataGridViewTextBoxColumn2.HeaderText = "Name";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            emailDataGridViewTextBoxColumn.MinimumWidth = 6;
             emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             emailDataGridViewTextBoxColumn.ReadOnly = true;
-            emailDataGridViewTextBoxColumn.Width = 125;
             // 
             // phoneNumberDataGridViewTextBoxColumn
             // 
             phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
             phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-            phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
             phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
             phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            phoneNumberDataGridViewTextBoxColumn.Width = 125;
             // 
             // addressDataGridViewTextBoxColumn
             // 
             addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
             addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            addressDataGridViewTextBoxColumn.MinimumWidth = 6;
             addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             addressDataGridViewTextBoxColumn.ReadOnly = true;
-            addressDataGridViewTextBoxColumn.Width = 125;
             // 
             // dateOfBirthDataGridViewTextBoxColumn
             // 
             dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "DateOfBirth";
             dateOfBirthDataGridViewTextBoxColumn.HeaderText = "DateOfBirth";
-            dateOfBirthDataGridViewTextBoxColumn.MinimumWidth = 6;
             dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
             dateOfBirthDataGridViewTextBoxColumn.ReadOnly = true;
-            dateOfBirthDataGridViewTextBoxColumn.Width = 125;
             // 
             // jobTitleDataGridViewTextBoxColumn
             // 
             jobTitleDataGridViewTextBoxColumn.DataPropertyName = "JobTitle";
             jobTitleDataGridViewTextBoxColumn.HeaderText = "JobTitle";
-            jobTitleDataGridViewTextBoxColumn.MinimumWidth = 6;
             jobTitleDataGridViewTextBoxColumn.Name = "jobTitleDataGridViewTextBoxColumn";
             jobTitleDataGridViewTextBoxColumn.ReadOnly = true;
-            jobTitleDataGridViewTextBoxColumn.Width = 125;
             // 
             // salaryDataGridViewTextBoxColumn
             // 
             salaryDataGridViewTextBoxColumn.DataPropertyName = "salary";
             salaryDataGridViewTextBoxColumn.HeaderText = "salary";
-            salaryDataGridViewTextBoxColumn.MinimumWidth = 6;
             salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
             salaryDataGridViewTextBoxColumn.ReadOnly = true;
-            salaryDataGridViewTextBoxColumn.Width = 125;
             // 
             // EmployeeForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(731, 463);
+            ClientSize = new Size(640, 347);
             Controls.Add(dataGridView1);
             Controls.Add(numEmployeeSalary);
             Controls.Add(cbEmployeeJobTittle);
@@ -434,6 +433,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "EmployeeForm";
             Text = "EmployeeForm";
             ((System.ComponentModel.ISupportInitialize)vWEmployeeAndJobBindingSource).EndInit();
@@ -486,5 +486,7 @@
         private DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn jobTitleDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }
