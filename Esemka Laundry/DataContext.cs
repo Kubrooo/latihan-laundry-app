@@ -13,7 +13,7 @@ namespace Esemka_Laundry
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-93V4QBI;database=laundryDB;Trusted_Connection=true;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-93V4QBI\\SQLEXPRESS;database=laundryDB;Trusted_Connection=true;TrustServerCertificate=True");
         }
 
         public DbSet<Category> Categories { get; set; }
@@ -26,5 +26,18 @@ namespace Esemka_Laundry
         public DbSet<PrePaidPackage> PrePaidPackages { get; set; }
         public DbSet<HeaderDeposit> HeaderDeposits { get; set;}
         public DbSet<DetailDeposit> DetailDeposits { get; set; }
+        public DbSet<VWEmployeeAndJob> VwEmployeeAndJob { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<VWEmployeeAndJob>(e =>
+            {
+                e.HasNoKey();
+                e.ToView("VW_EmployeeAndJob");
+            }
+            );
+        }
+
     }
 }

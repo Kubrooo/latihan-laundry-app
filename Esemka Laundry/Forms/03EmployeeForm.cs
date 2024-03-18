@@ -13,10 +13,25 @@ namespace Esemka_Laundry.Forms
 {
     public partial class EmployeeForm : Form
     {
-        private DataContext? _context;
+        DataContext _context;
         public EmployeeForm()
         {
             InitializeComponent();
+            _context = new DataContext();
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            _context.VwEmployeeAndJob.Load();
+           vWEmployeeAndJobBindingSource.DataSource = _context.VwEmployeeAndJob.Local.ToBindingList();
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            _context.Dispose();
+            _context = null;
         }
     }
 }
