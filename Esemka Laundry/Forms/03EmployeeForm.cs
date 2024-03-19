@@ -33,6 +33,7 @@ namespace Esemka_Laundry.Forms
             dataGridView1.ReadOnly = true;
             btnEmployeeSave.Hide();
             btnEmployeeCancel.Hide();
+            disableField();
         }
 
         protected override void OnClosed(EventArgs e)
@@ -142,7 +143,7 @@ namespace Esemka_Laundry.Forms
         private void loadViewAndAddToBindingList()
         {
             _context.VwEmployeeAndJob.Load();
-            vWEmployeeAndJobBindingSource.DataSource = _context.VwEmployeeAndJob.Local.ToBindingList();
+            vWEmployeeAndJobBindingSource.DataSource = _context.VwEmployeeAndJob.ToList();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
