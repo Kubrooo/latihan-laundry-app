@@ -137,11 +137,11 @@ namespace Esemka_Laundry.Forms
 
             Show();
             Disable();
-            tbServiceName.Text = row.Cells[1].Value.ToString();
-            cbServiceCategory.Text = row.Cells[2].Value.ToString();
-            cbServiceUnit.Text = row.Cells[3].Value.ToString();
-            numServicePrice.Text = row.Cells[4].Value.ToString();
-            numServiceDuration.Text = row.Cells[5].Value.ToString();
+            tbServiceName.Text = selectedService.ServiceName.ToString();
+            cbServiceCategory.Text = selectedService.Category.ToString();
+            cbServiceUnit.Text = selectedService.Unit.ToString();
+            numServicePrice.Text = selectedService.Price.ToString();
+            numServiceDuration.Text = selectedService.EstimationDuration.ToString();
 
             category = row.Cells[2].Value.ToString();
             unit = row.Cells[3].Value.ToString();
@@ -189,7 +189,6 @@ namespace Esemka_Laundry.Forms
 
                 Service service = new Service();
                 service.Name = tbServiceName.Text;
-                service.Id = catId;
                 service.PriceUnit = Convert.ToInt32(units);
             }
         }

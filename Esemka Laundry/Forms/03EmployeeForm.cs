@@ -32,7 +32,7 @@ namespace Esemka_Laundry.Forms
             loadViewAndAddToBindingList();
             dataGridView1.ReadOnly = true;
             btnEmployeeSave.Hide();
-            btnEmployeeSave.Hide();
+            btnEmployeeCancel.Hide();
         }
 
         protected override void OnClosed(EventArgs e)
@@ -142,7 +142,7 @@ namespace Esemka_Laundry.Forms
         private void loadViewAndAddToBindingList()
         {
             _context.VwEmployeeAndJob.Load();
-            vWEmployeeAndJobBindingSource.DataSource = vWEmployeeAndJobBindingSource.DataSource = _context.VwEmployeeAndJob.Local.ToBindingList();
+            vWEmployeeAndJobBindingSource.DataSource = _context.VwEmployeeAndJob.Local.ToBindingList();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -154,15 +154,16 @@ namespace Esemka_Laundry.Forms
             dgClick = "Clicked";
 
             Show();
-            tbEmployeeName.Text = row.Cells[1].Value.ToString();
-            tbEmployeeEmail.Text = row.Cells[2].Value.ToString();
-            tbEmployeePhoneNumber.Text = row.Cells[3].Value.ToString();
+            tbEmployeeID.Text = selectedEmployee.Id.ToString();
+            tbEmployeeName.Text = selectedEmployee.EmployeeName.ToString();
+            tbEmployeeEmail.Text = selectedEmployee.Email.ToString();
+            tbEmployeePhoneNumber.Text = selectedEmployee.PhoneNumber.ToString();
             tbEmployeePassword.Enabled = false;
             tbEmployeeConfirmPw.Enabled = false;
-            rtbEmployeeAddress.Text = row.Cells[4].Value.ToString();
-            dtpEmployeeDateOfBirth.Text = row.Cells[5].Value.ToString();
-            cbEmployeeJobTittle.Text = row.Cells[6].Value.ToString();
-            numEmployeeSalary.Text = row.Cells[7].Value.ToString();
+            rtbEmployeeAddress.Text = selectedEmployee.Address.ToString();
+            dtpEmployeeDateOfBirth.Text = selectedEmployee.DateOfBirth.ToString();
+            cbEmployeeJobTittle.Text = selectedEmployee.JobTitle.ToString();
+            numEmployeeSalary.Text = selectedEmployee.salary.ToString();
             job = cbEmployeeJobTittle.Text;
             disableField();
         }

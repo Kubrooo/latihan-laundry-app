@@ -18,6 +18,8 @@ namespace Esemka_Laundry
             base.OnLoad(e);
             _context = new DataContext();
             _context.Database.EnsureCreated();
+            tbLoginUsername.Text = "adefrain0@diigo.com";
+            tbLoginPassword.Text = "fkuXmGlww";
         }
 
         protected override void OnClosed(EventArgs e)
