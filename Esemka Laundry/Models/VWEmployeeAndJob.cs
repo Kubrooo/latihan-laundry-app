@@ -2,15 +2,16 @@
 using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Esemka_Laundry.Models
 {
-    [Keyless]
     public class VWEmployeeAndJob
     {
+        [Key]
         public int Id { get; set; }
         public string EmployeeName { get; set; }
         public string Email { get; set; }

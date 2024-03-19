@@ -27,15 +27,21 @@ namespace Esemka_Laundry
         public DbSet<HeaderDeposit> HeaderDeposits { get; set;}
         public DbSet<DetailDeposit> DetailDeposits { get; set; }
         public DbSet<VWEmployeeAndJob> VwEmployeeAndJob { get; set; }
+        public DbSet<VWServiceUnitAndCategory> vWServiceUnitAndCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<VWEmployeeAndJob>(e =>
             {
-                e.HasNoKey();
                 e.ToView("VW_EmployeeAndJob");
             }
+            );
+
+            modelBuilder.Entity<VWServiceUnitAndCategory>(s =>
+            {
+                s.ToView("VW_ServiceUnitAndCategory");
+            } 
             );
         }
 

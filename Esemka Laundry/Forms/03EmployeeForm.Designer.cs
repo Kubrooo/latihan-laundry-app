@@ -157,6 +157,7 @@
             // 
             // tbEmployeeID
             // 
+            tbEmployeeID.Enabled = false;
             tbEmployeeID.Location = new Point(177, 233);
             tbEmployeeID.Name = "tbEmployeeID";
             tbEmployeeID.Size = new Size(163, 27);
@@ -242,6 +243,7 @@
             btnEmployeeInsert.TabIndex = 21;
             btnEmployeeInsert.Text = "Insert";
             btnEmployeeInsert.UseVisualStyleBackColor = true;
+            btnEmployeeInsert.Click += btnEmployeeInsert_Click;
             // 
             // btnEmployeeUpdate
             // 
@@ -251,6 +253,7 @@
             btnEmployeeUpdate.TabIndex = 22;
             btnEmployeeUpdate.Text = "Update";
             btnEmployeeUpdate.UseVisualStyleBackColor = true;
+            btnEmployeeUpdate.Click += btnEmployeeUpdate_Click;
             // 
             // btnEmployeeDelete
             // 
@@ -260,10 +263,10 @@
             btnEmployeeDelete.TabIndex = 23;
             btnEmployeeDelete.Text = "Delete";
             btnEmployeeDelete.UseVisualStyleBackColor = true;
+            btnEmployeeDelete.Click += btnEmployeeDelete_Click;
             // 
             // btnEmployeeSave
             // 
-            btnEmployeeSave.Enabled = false;
             btnEmployeeSave.ForeColor = Color.Green;
             btnEmployeeSave.Location = new Point(471, 400);
             btnEmployeeSave.Name = "btnEmployeeSave";
@@ -271,10 +274,10 @@
             btnEmployeeSave.TabIndex = 24;
             btnEmployeeSave.Text = "Save";
             btnEmployeeSave.UseVisualStyleBackColor = true;
+            btnEmployeeSave.Click += btnEmployeeSave_Click;
             // 
             // btnEmployeeCancel
             // 
-            btnEmployeeCancel.Enabled = false;
             btnEmployeeCancel.ForeColor = Color.Green;
             btnEmployeeCancel.Location = new Point(571, 400);
             btnEmployeeCancel.Name = "btnEmployeeCancel";
@@ -282,6 +285,7 @@
             btnEmployeeCancel.TabIndex = 25;
             btnEmployeeCancel.Text = "Cancel";
             btnEmployeeCancel.UseVisualStyleBackColor = true;
+            btnEmployeeCancel.Click += btnEmployeeCancel_Click;
             // 
             // tbEmployeePassword
             // 
@@ -308,6 +312,7 @@
             // numEmployeeSalary
             // 
             numEmployeeSalary.Location = new Point(551, 271);
+            numEmployeeSalary.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             numEmployeeSalary.Name = "numEmployeeSalary";
             numEmployeeSalary.Size = new Size(163, 27);
             numEmployeeSalary.TabIndex = 31;
@@ -324,8 +329,10 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(707, 167);
             dataGridView1.TabIndex = 32;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // idDataGridViewTextBoxColumn
             // 
