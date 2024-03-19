@@ -186,8 +186,7 @@ namespace Esemka_Laundry.Forms
 
         private async void ActionInsert()
         {
-            bool cPhoneNum = int.TryParse(tbEmployeePhoneNumber.Text, out var phoneNum);
-            if (!cPhoneNum || tbEmployeeName.Text == "" || tbEmployeeEmail.Text == "" || tbEmployeePassword.Text == "" || tbEmployeeConfirmPw.Text == "" || rtbEmployeeAddress.Text == "" || cbEmployeeJobTittle.Text == "" || dtpEmployeeDateOfBirth.Text == "" || numEmployeeSalary.Value < 0)
+            if (tbEmployeePhoneNumber.Text == "" || tbEmployeeName.Text == "" || tbEmployeeEmail.Text == "" || tbEmployeePassword.Text == "" || tbEmployeeConfirmPw.Text == "" || rtbEmployeeAddress.Text == "" || cbEmployeeJobTittle.Text == "" || dtpEmployeeDateOfBirth.Text == "" || numEmployeeSalary.Value < 0)
             {
                 MessageBox.Show("You must enter data completely", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -203,6 +202,7 @@ namespace Esemka_Laundry.Forms
                 newEmployee.PhoneNumber = tbEmployeePhoneNumber.Text;
                 newEmployee.Address = rtbEmployeeAddress.Text;
                 newEmployee.DateOfBirth = dtpEmployeeDateOfBirth.Value;
+                newEmployee.Password = tbEmployeePassword.Text;
                 newEmployee.Job = jobEm;
                 newEmployee.salary = Convert.ToInt32(Math.Round(numEmployeeSalary.Value, 0));
 
