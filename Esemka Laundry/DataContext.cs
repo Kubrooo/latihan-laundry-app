@@ -13,7 +13,7 @@ namespace Esemka_Laundry
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-93V4QBI\\SQLEXPRESS;database=laundryDB;Trusted_Connection=true;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;database=laundryDB;Trusted_Connection=true;TrustServerCertificate=True");
         }
 
         public DbSet<Category> Categories { get; set; }
