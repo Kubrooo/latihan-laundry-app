@@ -31,10 +31,11 @@
             btnMainFormLogout = new Button();
             lblMainSayHello = new Label();
             lblMainTittle = new Label();
-            label1 = new Label();
+            labelTanggal = new Label();
             panel1 = new Panel();
             btnMainMenu = new Button();
             panel2 = new Panel();
+            btnMainCustomer = new Button();
             btnMainViewTransaction = new Button();
             btnMainPrepaidPackage = new Button();
             btnMainTransactionDepo = new Button();
@@ -47,7 +48,7 @@
             // 
             // btnMainFormLogout
             // 
-            btnMainFormLogout.Location = new Point(860, 17);
+            btnMainFormLogout.Location = new Point(823, 17);
             btnMainFormLogout.Name = "btnMainFormLogout";
             btnMainFormLogout.Size = new Size(94, 29);
             btnMainFormLogout.TabIndex = 0;
@@ -58,7 +59,7 @@
             // lblMainSayHello
             // 
             lblMainSayHello.AutoSize = true;
-            lblMainSayHello.Location = new Point(738, 21);
+            lblMainSayHello.Location = new Point(676, 22);
             lblMainSayHello.Name = "lblMainSayHello";
             lblMainSayHello.Size = new Size(116, 20);
             lblMainSayHello.TabIndex = 1;
@@ -74,26 +75,26 @@
             lblMainTittle.TabIndex = 8;
             lblMainTittle.Text = "Esemka Laundry";
             // 
-            // label1
+            // labelTanggal
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(444, 21);
-            label1.Name = "label1";
-            label1.Size = new Size(61, 20);
-            label1.TabIndex = 9;
-            label1.Text = "Tanggal";
+            labelTanggal.AutoSize = true;
+            labelTanggal.Location = new Point(444, 21);
+            labelTanggal.Name = "labelTanggal";
+            labelTanggal.Size = new Size(61, 20);
+            labelTanggal.TabIndex = 9;
+            labelTanggal.Text = "Tanggal";
             // 
             // panel1
             // 
             panel1.Controls.Add(btnMainMenu);
             panel1.Controls.Add(lblMainTittle);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(labelTanggal);
             panel1.Controls.Add(btnMainFormLogout);
             panel1.Controls.Add(lblMainSayHello);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(966, 58);
+            panel1.Size = new Size(935, 58);
             panel1.TabIndex = 10;
             // 
             // btnMainMenu
@@ -107,6 +108,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(btnMainCustomer);
             panel2.Controls.Add(btnMainViewTransaction);
             panel2.Controls.Add(btnMainPrepaidPackage);
             panel2.Controls.Add(btnMainTransactionDepo);
@@ -118,6 +120,16 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(191, 499);
             panel2.TabIndex = 12;
+            // 
+            // btnMainCustomer
+            // 
+            btnMainCustomer.Location = new Point(21, 216);
+            btnMainCustomer.Name = "btnMainCustomer";
+            btnMainCustomer.Size = new Size(154, 29);
+            btnMainCustomer.TabIndex = 14;
+            btnMainCustomer.Text = "Manage Customer";
+            btnMainCustomer.UseVisualStyleBackColor = true;
+            btnMainCustomer.Click += btnMainCustomer_Click;
             // 
             // btnMainViewTransaction
             // 
@@ -183,7 +195,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(966, 557);
+            ClientSize = new Size(935, 557);
             Controls.Add(panel2);
             Controls.Add(panel1);
             IsMdiContainer = true;
@@ -200,7 +212,7 @@
         private Button btnMainFormLogout;
         private Label lblMainSayHello;
         private Label lblMainTittle;
-        private Label label1;
+        private Label labelTanggal;
         private Panel panel1;
         private Button btnMainMenu;
         private Panel panel2;
@@ -210,5 +222,6 @@
         private Button btnMainPackage;
         private Button btnMainService;
         private Button btnMainEmployee;
+        private Button btnMainCustomer;
     }
 }

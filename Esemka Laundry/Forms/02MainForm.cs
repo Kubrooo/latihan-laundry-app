@@ -18,10 +18,22 @@ namespace Esemka_Laundry.Forms
         TransactionDepositForm transactionDepositForm;
         PrepaidPackageForm prepaidPackageForm;
         ViewTransactionForm viewTransactionForm;
+        CustomerForm customerForm;
         Form currentOpenForm;
-        public MainForm()
+        private string? nameEmployee;
+        private int idEmployee;
+        public MainForm(string name, int id)
         {
             InitializeComponent();
+            nameEmployee = name;
+            idEmployee = id;
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            labelTanggal.Text = DateTime.Now.ToString();
+            lblMainSayHello.Text = "Hello, " + nameEmployee;
         }
 
         private void btnMainFormLogout_Click(object sender, EventArgs e)
@@ -74,7 +86,7 @@ namespace Esemka_Laundry.Forms
             if (transactionDepositForm == null)
             {
                 closeCurrentForm();
-                transactionDepositForm = new TransactionDepositForm();
+                transactionDepositForm = new TransactionDepositForm(idEmployee);
                 transactionDepositForm.MdiParent = this;
                 transactionDepositForm.Dock = DockStyle.Fill;
                 transactionDepositForm.Show();
@@ -84,26 +96,26 @@ namespace Esemka_Laundry.Forms
 
         private void btnMainPrepaidPackage_Click(object sender, EventArgs e)
         {
-           if(prepaidPackageForm == null)
+            if (prepaidPackageForm == null)
             {
 
                 closeCurrentForm();
                 prepaidPackageForm = new PrepaidPackageForm();
                 prepaidPackageForm.MdiParent = this;
                 prepaidPackageForm.Dock = DockStyle.Fill;
-                prepaidPackageForm.Show(); 
+                prepaidPackageForm.Show();
                 currentOpenForm = prepaidPackageForm;
             }
         }
 
         private void btnMainViewTransaction_Click(object sender, EventArgs e)
         {
-            if(viewTransactionForm == null)
+            if (viewTransactionForm == null)
             {
-                closeCurrentForm(); 
+                closeCurrentForm();
                 viewTransactionForm = new ViewTransactionForm();
                 viewTransactionForm.MdiParent = this;
-                viewTransactionForm.Dock = DockStyle.Fill; 
+                viewTransactionForm.Dock = DockStyle.Fill;
                 viewTransactionForm.Show();
                 currentOpenForm = viewTransactionForm;
             }
@@ -118,9 +130,22 @@ namespace Esemka_Laundry.Forms
             prepaidPackageForm = null;
             viewTransactionForm = null;
 
-            if(currentOpenForm != null)
+            if (currentOpenForm != null)
             {
                 currentOpenForm.Close();
+            }
+        }
+
+        private void btnMainCustomer_Click(object sender, EventArgs e)
+        {
+            if(viewTransactionForm == null)
+            {
+                closeCurrentForm();
+                customerForm = new CustomerForm();
+                customerForm.MdiParent = this;
+                customerForm.Dock= DockStyle.Fill;
+                customerForm.Show();
+                currentOpenForm = customerForm;
             }
         }
     }

@@ -31,7 +31,7 @@
             components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            tbSearchService = new TextBox();
             dataGridView1 = new DataGridView();
             serviceIDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             serviceNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -59,6 +59,7 @@
             label10 = new Label();
             btnServiceSave = new Button();
             btnServiceCancel = new Button();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vWServiceUnitAndCategoryBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numServicePrice).BeginInit();
@@ -77,18 +78,19 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(538, 38);
+            label2.Location = new Point(428, 38);
             label2.Name = "label2";
             label2.Size = new Size(53, 20);
             label2.TabIndex = 1;
             label2.Text = "Search";
             // 
-            // textBox1
+            // tbSearchService
             // 
-            textBox1.Location = new Point(597, 35);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(191, 27);
-            textBox1.TabIndex = 2;
+            tbSearchService.Location = new Point(597, 35);
+            tbSearchService.Name = "tbSearchService";
+            tbSearchService.Size = new Size(191, 27);
+            tbSearchService.TabIndex = 2;
+            tbSearchService.Leave += tbSearchService_Leave;
             // 
             // dataGridView1
             // 
@@ -282,6 +284,7 @@
             btnServiceUpdate.TabIndex = 17;
             btnServiceUpdate.Text = "Update";
             btnServiceUpdate.UseVisualStyleBackColor = true;
+            btnServiceUpdate.Click += btnServiceUpdate_Click;
             // 
             // btnServiceDelete
             // 
@@ -291,6 +294,7 @@
             btnServiceDelete.TabIndex = 18;
             btnServiceDelete.Text = "Delete";
             btnServiceDelete.UseVisualStyleBackColor = true;
+            btnServiceDelete.Click += btnServiceDelete_Click;
             // 
             // label9
             // 
@@ -330,12 +334,24 @@
             btnServiceCancel.TabIndex = 22;
             btnServiceCancel.Text = "Cancel";
             btnServiceCancel.UseVisualStyleBackColor = true;
+            btnServiceCancel.Click += btnServiceCancel_Click;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Name", "Price" });
+            comboBox1.Location = new Point(483, 34);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(108, 28);
+            comboBox1.TabIndex = 23;
+            comboBox1.Leave += comboBox1_Leave;
             // 
             // ServiceForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 491);
+            Controls.Add(comboBox1);
             Controls.Add(btnServiceCancel);
             Controls.Add(btnServiceSave);
             Controls.Add(label10);
@@ -356,7 +372,7 @@
             Controls.Add(tbServiceId);
             Controls.Add(label3);
             Controls.Add(dataGridView1);
-            Controls.Add(textBox1);
+            Controls.Add(tbSearchService);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
@@ -374,7 +390,7 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox tbSearchService;
         private DataGridView dataGridView1;
         private Label label3;
         private TextBox tbServiceId;
@@ -402,5 +418,6 @@
         private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn estimationDurationDataGridViewTextBoxColumn;
         private BindingSource vWServiceUnitAndCategoryBindingSource;
+        private ComboBox comboBox1;
     }
 }

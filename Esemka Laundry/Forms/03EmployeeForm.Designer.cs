@@ -67,6 +67,8 @@
             dateOfBirthDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             jobTitleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             salaryDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            comboBox1 = new ComboBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)vWEmployeeAndJobBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numEmployeeSalary).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -84,7 +86,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(471, 29);
+            label2.Location = new Point(365, 29);
             label2.Name = "label2";
             label2.Size = new Size(64, 20);
             label2.TabIndex = 1;
@@ -92,10 +94,11 @@
             // 
             // tbEmployeeSearch
             // 
-            tbEmployeeSearch.Location = new Point(528, 26);
+            tbEmployeeSearch.Location = new Point(543, 26);
             tbEmployeeSearch.Name = "tbEmployeeSearch";
-            tbEmployeeSearch.Size = new Size(178, 27);
+            tbEmployeeSearch.Size = new Size(163, 27);
             tbEmployeeSearch.TabIndex = 2;
+            tbEmployeeSearch.Leave += tbEmployeeSearch_Leave;
             // 
             // vWEmployeeAndJobBindingSource
             // 
@@ -409,11 +412,33 @@
             salaryDataGridViewTextBoxColumn.ReadOnly = true;
             salaryDataGridViewTextBoxColumn.Width = 125;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Name", "Email", "PhoneNumber" });
+            comboBox1.Location = new Point(435, 25);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(102, 28);
+            comboBox1.TabIndex = 33;
+            comboBox1.Leave += comboBox1_Leave;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(384, 422);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 34;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // EmployeeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(721, 463);
+            ClientSize = new Size(722, 463);
+            Controls.Add(button1);
+            Controls.Add(comboBox1);
             Controls.Add(dataGridView1);
             Controls.Add(numEmployeeSalary);
             Controls.Add(cbEmployeeJobTittle);
@@ -498,5 +523,7 @@
         private DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn jobTitleDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
+        private ComboBox comboBox1;
+        private Button button1;
     }
 }

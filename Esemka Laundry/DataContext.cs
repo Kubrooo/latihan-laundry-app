@@ -28,6 +28,11 @@ namespace Esemka_Laundry
         public DbSet<DetailDeposit> DetailDeposits { get; set; }
         public DbSet<VWEmployeeAndJob> VwEmployeeAndJob { get; set; }
         public DbSet<VWServiceUnitAndCategory> vWServiceUnitAndCategories { get; set; }
+        public DbSet<VWServiceAndPackage> vWServiceAndPackages { get; set; }
+        public DbSet<VWPrepaidPackageCustomerAndService> vWPrepaidPackageCustomerAndServices { get; set; }
+        public DbSet<VWHeaderDepositCustomer> vWHeaderDepositCustomers { get; set; }
+        public DbSet<VWDetailDepositAndTranscation> vWDetailDepositAndTranscations { get; set; }
+        public DbSet<VWDetailDepositsAndService> vWDetailDepositsAndServices { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -43,6 +48,30 @@ namespace Esemka_Laundry
                 s.ToView("VW_ServiceUnitAndCategory");
             } 
             );
+            modelBuilder.Entity<VWServiceAndPackage>(p =>
+            {
+                p.ToView("VW_ServiceAndPackage");
+            });
+
+            modelBuilder.Entity<VWPrepaidPackageCustomerAndService>(d =>
+            {
+                d.ToView("VW_PrepaidPackageCustomerAndService");
+            });
+
+            modelBuilder.Entity<VWHeaderDepositCustomer>(h => 
+            {
+                h.ToView("VW_HeaderDepositCustomer");
+            });
+
+            modelBuilder.Entity<VWDetailDepositAndTranscation>(d =>
+            {
+                d.ToView("VW_DetailDepositAndTransaction");
+            });
+
+            modelBuilder.Entity<VWDetailDepositsAndService>(d =>
+            {
+                d.ToView("VW_DetailDepositsAndService");
+            });
         }
 
     }
