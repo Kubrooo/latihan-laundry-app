@@ -36,13 +36,15 @@ namespace Esemka_Laundry.Forms
             base.OnLoad(e);
             loadHeaderAndAddToBinding();
 
-            dt.Columns.Add(new DataColumn("ServceName", typeof(string)));
-            dt.Columns.Add(new DataColumn("PrePaidPackageId",typeof(string)));
-            dt.Columns.Add(new DataColumn("Price Per Unit",typeof (int)));
-            dt.Columns.Add(new DataColumn("Total Unit",typeof(int)));
-            dt.Columns.Add(new DataColumn("Complete Time",typeof(string)));
-            //dt.Columns.Add(new DataColumn("Action",typeof(System.Windows.Forms.Button)));
-            dataGridView2.DataSource = dt;     
+            dataGridView2.Columns.Add("ServiceName", "Service Name");
+            dataGridView2.Columns.Add("PrePaidPackageId", "PrePaid Package Id");
+            dataGridView2.Columns.Add("PricePerUnit", "Price Per Unit");
+            dataGridView2.Columns.Add("TotalUnit", "Total Unit");
+            dataGridView2.Columns.Add("CompleteTime", "Complete Time");
+            var actionColumn = new DataGridViewButtonColumn();
+            actionColumn.HeaderText = "Action";
+            actionColumn.Text = "Complete";
+            dataGridView2.Columns.Add(actionColumn);
         }
 
         protected override void OnClosed(EventArgs e)
@@ -130,20 +132,7 @@ namespace Esemka_Laundry.Forms
                                                     .ToListAsync();
             foreach(var detail in detailDeposits)
             {
-                DataRow dr = dt.NewRow();   
-                dr[0] = detail.ServiceName;
-                dr[1] = detail.PrepaidPackageId.ToString();
-                dr[2] = detail.PriceUnit;
-                dr[3] = detail.TotalUnit;
-                dr[4] = detail.CompletedDateTime.ToString();
-               
-                
-                Button actionButton = new Button();
-                actionButton.Text = "Complete";
-                dr[5] = actionButton;
-                actionButton.Visible = true;
-                
-                dt.Rows.Add(dr);
+                dataGridView2.Rows.Add(detail);
             }
         }   
 
