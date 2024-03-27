@@ -45,6 +45,14 @@
             label4 = new Label();
             vWDetailDepositsAndServiceBindingSource = new BindingSource(components);
             dataGridView2 = new DataGridView();
+            idDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            headerDepositIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            priceUnitDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            serviceNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            prepaidPackageIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            totalUnitDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            completedDateTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            Action = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vWHeaderDepositCustomerBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)detailDepositBindingSource).BeginInit();
@@ -180,8 +188,11 @@
             // 
             dataGridView2.AllowUserToAddRows = false;
             dataGridView2.AllowUserToDeleteRows = false;
+            dataGridView2.AutoGenerateColumns = false;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn1, headerDepositIdDataGridViewTextBoxColumn, priceUnitDataGridViewTextBoxColumn, serviceNameDataGridViewTextBoxColumn, prepaidPackageIdDataGridViewTextBoxColumn, totalUnitDataGridViewTextBoxColumn, completedDateTimeDataGridViewTextBoxColumn, Action });
+            dataGridView2.DataSource = vWDetailDepositsAndServiceBindingSource;
             dataGridView2.Location = new Point(13, 272);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.ReadOnly = true;
@@ -189,6 +200,71 @@
             dataGridView2.Size = new Size(752, 166);
             dataGridView2.TabIndex = 7;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            idDataGridViewTextBoxColumn1.HeaderText = "id";
+            idDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            idDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // headerDepositIdDataGridViewTextBoxColumn
+            // 
+            headerDepositIdDataGridViewTextBoxColumn.DataPropertyName = "HeaderDepositId";
+            headerDepositIdDataGridViewTextBoxColumn.HeaderText = "HeaderDepositId";
+            headerDepositIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            headerDepositIdDataGridViewTextBoxColumn.Name = "headerDepositIdDataGridViewTextBoxColumn";
+            headerDepositIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceUnitDataGridViewTextBoxColumn
+            // 
+            priceUnitDataGridViewTextBoxColumn.DataPropertyName = "PriceUnit";
+            priceUnitDataGridViewTextBoxColumn.HeaderText = "PriceUnit";
+            priceUnitDataGridViewTextBoxColumn.MinimumWidth = 6;
+            priceUnitDataGridViewTextBoxColumn.Name = "priceUnitDataGridViewTextBoxColumn";
+            priceUnitDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // serviceNameDataGridViewTextBoxColumn
+            // 
+            serviceNameDataGridViewTextBoxColumn.DataPropertyName = "ServiceName";
+            serviceNameDataGridViewTextBoxColumn.HeaderText = "ServiceName";
+            serviceNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            serviceNameDataGridViewTextBoxColumn.Name = "serviceNameDataGridViewTextBoxColumn";
+            serviceNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prepaidPackageIdDataGridViewTextBoxColumn
+            // 
+            prepaidPackageIdDataGridViewTextBoxColumn.DataPropertyName = "PrepaidPackageId";
+            prepaidPackageIdDataGridViewTextBoxColumn.HeaderText = "PrepaidPackageId";
+            prepaidPackageIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            prepaidPackageIdDataGridViewTextBoxColumn.Name = "prepaidPackageIdDataGridViewTextBoxColumn";
+            prepaidPackageIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalUnitDataGridViewTextBoxColumn
+            // 
+            totalUnitDataGridViewTextBoxColumn.DataPropertyName = "TotalUnit";
+            totalUnitDataGridViewTextBoxColumn.HeaderText = "TotalUnit";
+            totalUnitDataGridViewTextBoxColumn.MinimumWidth = 6;
+            totalUnitDataGridViewTextBoxColumn.Name = "totalUnitDataGridViewTextBoxColumn";
+            totalUnitDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // completedDateTimeDataGridViewTextBoxColumn
+            // 
+            completedDateTimeDataGridViewTextBoxColumn.DataPropertyName = "CompletedDateTime";
+            completedDateTimeDataGridViewTextBoxColumn.HeaderText = "CompletedDateTime";
+            completedDateTimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            completedDateTimeDataGridViewTextBoxColumn.Name = "completedDateTimeDataGridViewTextBoxColumn";
+            completedDateTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Action
+            // 
+            Action.HeaderText = "Action";
+            Action.MinimumWidth = 6;
+            Action.Name = "Action";
+            Action.ReadOnly = true;
+            Action.Text = "Complete";
+            Action.UseColumnTextForButtonValue = true;
             // 
             // ViewTransactionForm
             // 
@@ -233,5 +309,13 @@
         private BindingSource detailDepositBindingSource;
         private BindingSource vWDetailDepositsAndServiceBindingSource;
         private DataGridView dataGridView2;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn headerDepositIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn priceUnitDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn serviceNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn prepaidPackageIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn totalUnitDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn completedDateTimeDataGridViewTextBoxColumn;
+        private DataGridViewButtonColumn Action;
     }
 }

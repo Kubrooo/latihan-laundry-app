@@ -20,8 +20,6 @@ namespace Esemka_Laundry
             _context.Database.EnsureCreated();
             tbLoginUsername.Text = "adefrain0@diigo.com";
             tbLoginPassword.Text = "fkuXmGlww";
-
-            btnLoginReset.Visible = false;
         }
 
         protected override void OnClosed(EventArgs e)
