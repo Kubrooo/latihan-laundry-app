@@ -41,7 +41,7 @@ namespace Esemka_Laundry.Forms
             dt.Columns.Add(new DataColumn("Price Per Unit",typeof (int)));
             dt.Columns.Add(new DataColumn("Total Unit",typeof(int)));
             dt.Columns.Add(new DataColumn("Complete Time",typeof(string)));
-            dt.Columns.Add(new DataColumn("Action",typeof(System.Windows.Forms.Button)));
+            //dt.Columns.Add(new DataColumn("Action",typeof(System.Windows.Forms.Button)));
             dataGridView2.DataSource = dt;     
         }
 
