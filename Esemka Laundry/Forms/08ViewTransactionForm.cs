@@ -134,7 +134,8 @@ namespace Esemka_Laundry.Forms
                 row.Cells[6].Value = DateTime.Now.ToString();
                 dataGridView2.Refresh();
 
-                _context.SaveChanges();
+                _context.SaveChanges(); 
+                //need somefix but not now
             }
         }
     }
